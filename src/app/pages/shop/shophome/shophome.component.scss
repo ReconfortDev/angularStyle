@@ -1,0 +1,134 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+main {
+  .load {
+    @include flex-center;
+    padding: 40px;
+    color: $secondary-color;
+    width: $full;
+    height: 82vh;
+  }
+
+  .error {
+    @include flex-center;
+    padding: 40px;
+    color: red;
+    width: $full;
+  }
+
+
+  .main {
+    color: $light;
+
+    .hero-section {
+      @include flex-center-start;
+      width: 100%;
+      flex-direction: column;
+      padding: $spacing-large*2 0;
+
+      .title {
+        font-size: $spacing-large * 3;
+        font-weight: bolder;
+        color: $light;
+      }
+
+      .hero-description {
+        color: $light;
+      }
+    }
+
+    .container {
+      display: flex;
+      gap: $spacing-large;
+      flex-wrap: wrap;
+
+      .card {
+        @include flex-start;
+        flex-direction: column;
+        width: 45%;
+        gap: 10px;
+        padding: $spacing-medium $spacing-medium 16px $spacing-medium;
+        border-radius: $spacing-large;
+        transition: ease-in-out 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $dark;
+          border: 1px solid $light;
+
+          .imgWrapper img {
+            transform: scale(1.06);
+          }
+        }
+
+        .cardIn {
+          @include flex-start;
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+
+          .source {
+            padding: $spacing-medium;
+            background-color: $light;
+            color: $dark;
+            border-radius: 100px;
+          }
+
+          .imgWrapper {
+            position: relative;
+            overflow: hidden;
+            height: 30vh;
+            width: 100%;
+            border-radius: $spacing-large;
+
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: ease-in-out 0.3s;
+            }
+          }
+
+          .author {
+            @include flex-start;
+            flex-direction: column;
+            margin-top: 10px;
+          }
+        }
+      }
+
+      h2 {
+        color: $secondary-color;
+        font-size: 1.3rem;
+      }
+    }
+
+    .total {
+      color: $light;
+      margin-top: $spacing-medium;
+
+      span {
+        font-size: $spacing-large;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  main{
+    .container{
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-medium;
+      width: 100%;
+
+      .card{
+        width: 90vw !important;
+      }
+    }
+  }
+}

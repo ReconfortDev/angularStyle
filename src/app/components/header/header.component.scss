@@ -1,0 +1,101 @@
+@import "../../styles/_variables";
+@import "../../styles/_mixins";
+
+.header {
+  padding: $spacing-small 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  color: $light;
+  border-radius: $spacing-medium;
+  width: $full;
+  position: relative;
+  z-index: 2;
+
+  ol {
+    @include flex-start-center;
+    gap: $spacing-large;
+    font-size: $spacing-medium;
+
+    p{
+      display: block;
+    }
+
+    button{
+      border: 3px solid $light;
+      background: transparent;
+      color: $light;
+      padding:$spacing-medium $spacing-large;
+      font-weight: bold;
+      border-radius: 100px;
+      transition: ease-in-out 0.3s;
+      cursor: pointer;
+      &:hover {
+        background: $light;
+        color: $dark;
+      }
+    }
+
+    ol{
+      margin-left: -26px;
+      button{
+        padding:20px;
+        background: $light;
+        color: $dark;
+      }
+    }
+  }
+
+  ul {
+    @include flex-start-center;
+    gap: $spacing-small;
+    font-size: $spacing-medium;
+    border: 3px solid $light;
+    padding: 3px;
+    border-radius: 100px;
+
+    li {
+      text-decoration: none;
+      list-style: none;
+      border: 3px solid transparent;
+      background: transparent;
+      color: $light;
+      padding:$spacing-medium $spacing-large;
+      font-weight: bold;
+      border-radius: 100px;
+      transition: ease-in-out 0.3s;
+      cursor: pointer;
+      &:hover {
+        border: 3px solid $light;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    ol{
+      p{
+        display: none;
+      }
+      button{
+        padding:$spacing-small $spacing-medium;
+      }
+
+      ol{
+        button {
+          padding:14px $spacing-medium;
+        }
+      }
+    }
+
+    ul{
+      padding: 2px;
+
+      li{
+        padding:$spacing-small $spacing-medium;
+      }
+    }
+  }
+}

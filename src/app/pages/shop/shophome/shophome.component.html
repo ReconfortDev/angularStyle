@@ -1,0 +1,36 @@
+<main>
+  <div *ngIf="loading$ | async" class="load">
+    <p>Loading...</p>
+  </div>
+
+  <div *ngIf="error" class="error">
+    <p>Error: {{ error }}</p>
+  </div>
+
+  <div *ngIf="data" class="main">
+    <section class="hero-section">
+      <h1 class="title">Exodus</h1>
+      <p class="hero-description">Explore what is Happening in world</p>
+    </section>
+    <div class="container">
+      <div *ngFor="let info of data.articles" class="card">
+        <div *ngIf="info.urlToImage" [routerLink]="info.url" class="cardIn">
+          <p class="source">{{info.source.name}}</p>
+
+          <div class="imgWrapper">
+            <img [src]="info.urlToImage" [alt]="info.title"/>
+          </div>
+
+          <h2>{{ info.title }}</h2>
+          <p>{{ info.description }}</p>
+
+          <div class="author">
+            <p>Author: {{info.author}}</p>
+            <p>Published: {{info.publishedAt | date:'fullDate'}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="total">Total articles: <span>{{data.totalResults}}</span></p>
+  </div>
+</main>

@@ -1,0 +1,41 @@
+@import "../../../styles/_mixins";
+@import "../../../styles/_variables";
+
+section {
+  @include flex-center;
+  flex-direction: column;
+  height: 80vh;
+  gap: $spacing-large;
+
+  iframe{
+    width: $full;
+    height: $full;
+    scale: 0.8;
+    border-radius: 100px;
+  }
+
+  h1{
+    width: 20vw;
+    text-align: center;
+    color: $light;
+
+    span{
+      color: #df5e18;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section{
+    iframe{
+      width: 100vw;
+      height: 60vw;
+      scale: 0.9;
+      border-radius: 20px;
+    }
+
+    h1{
+      width: 80vw;
+    }
+  }
+}

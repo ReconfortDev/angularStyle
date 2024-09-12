@@ -1,0 +1,14 @@
+@import "../../styles/_variables";
+
+footer {
+  background-color: $dark;
+  color: $light;
+  border-radius: $spacing-medium;
+  padding: $spacing-large;
+  display: flex;
+  width: $full;
+  p{
+    text-align: center;
+    width: 100%;
+  };
+}
