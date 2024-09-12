@@ -17,3 +17,26 @@
   @extend .button;
   background-color: $primary-color;
 }
+
+$light-theme-colors: (
+  background-color: #ffffff,
+  text-color: #000000,
+);
+
+$dark-theme-colors: (
+  background-color: #1e1e1e,
+  text-color: #ffffff,
+);
+
+@mixin theme($theme-colors) {
+  background-color: map-get($theme-colors, background-color);
+  color: map-get($theme-colors, text-color);
+}
+
+.light-theme {
+  @include theme($light-theme-colors);
+}
+
+.dark-theme {
+  @include theme($dark-theme-colors);
+}

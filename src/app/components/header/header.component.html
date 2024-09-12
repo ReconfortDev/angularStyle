@@ -10,8 +10,13 @@
       <li routerLink="shop/social">Social</li>
     </ul>
     <ol>
-      <button>
-        Dark
+      <button (click)="toggleTheme()">
+        <span class="material-symbols-outlined" *ngIf="!isDarkTheme">
+          light_mode
+        </span>
+        <span class="material-symbols-outlined" *ngIf="isDarkTheme">
+          dark_mode
+        </span>
       </button>
     </ol>
   </ol>

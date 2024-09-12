@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AsyncPipe, DatePipe, JsonPipe, NgForOf, NgIf} from "@angular/common";
 import {Observable} from "rxjs";
 import {ArticlesResponse} from "../../../model/news";
-import {NewsService} from "../../../services/news.service";
+import {NewsService} from "../../../services/news/news.service";
 import {RouterLink} from "@angular/router";
 
 @Component({

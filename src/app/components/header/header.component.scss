@@ -40,7 +40,8 @@
     ol{
       margin-left: -26px;
       button{
-        padding:20px;
+        @include flex-center;
+        padding: 16px 20px;
         background: $light;
         color: $dark;
       }
