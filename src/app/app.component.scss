@@ -2,13 +2,14 @@
 @import 'styles/_mixins';
 @import "styles/_theme";
 
-.app-container {
-  @include theme($light-theme);
-}
+//.app-container {
+//  @include theme($light-theme-colors);
+//}
+
 
 main {
   flex-direction: column  ;
-  background-color: $dark;
+  background-color: var(--main-background);
   padding: $spacing-medium 20vw;
   gap: $spacing-medium;
   width: 100vw;
@@ -19,7 +20,7 @@ main {
   .color {
     height: 1000px;
     width: 1000px;
-    background-image: radial-gradient(closest-side, rgba(0, 111, 255, 0.11), rgba(36, 39, 39, 0.16));
+    background-image: radial-gradient(closest-side, rgba(42, 105, 241, 0.66), rgba(36, 39, 39, 0));
     position: fixed;
     top: -50vh;
     left: -20vw;
@@ -29,7 +30,7 @@ main {
   .color1 {
     height: 1000px;
     width: 1000px;
-    background-image: radial-gradient(closest-side, rgba(0, 255, 128, 0.07), rgba(36, 39, 39, 0.16));
+    background-image: radial-gradient(closest-side, rgba(255, 183, 0, 0.25), rgba(36, 39, 39, 0));
     position: fixed;
     bottom: -50vh;
     right: -20vw;

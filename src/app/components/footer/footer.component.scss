@@ -1,7 +1,10 @@
 @import "../../styles/_variables";
+@import "../../styles/_theme";
+
 
 footer {
-  background-color: $dark;
+  @include theme($light-theme-colors);
+  //background-color: $dark;
   color: $light;
   border-radius: $spacing-medium;
   padding: $spacing-large;
@@ -11,4 +14,8 @@ footer {
     text-align: center;
     width: 100%;
   };
+}
+
+footer.dark-theme {
+  @include theme($dark-theme-colors);
 }
