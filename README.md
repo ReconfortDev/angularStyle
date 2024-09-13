@@ -4,6 +4,10 @@
 
 The goal of this project is to demonstrate proficiency with the Angular CLI and advanced SCSS features. It will assess your understanding of Angular's project structure, component-based architecture, and advanced CSS preprocessing techniques.
 
+## ⚠️N.B
+API I consumed is limited which means data will not be fetched on live link , You will have to clone project to use the Consume Api properly
+
+
 ## Livelink
 
 https://angularsass.netlify.app/
@@ -63,6 +67,7 @@ At least one module is lazy-loaded to demonstrate the optimization of applicatio
 The application ensures full compatibility with mobile devices, utilizing responsive SCSS media queries for different screen sizes.
 
 ## Installation
+
 
 To install and run the project locally:
 
